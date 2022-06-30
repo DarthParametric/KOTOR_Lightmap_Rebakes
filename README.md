@@ -1,2 +1,2 @@
-# KOTOR_Lightmap_Rebakes
+# KOTOR Lightmap Rebakes
 A comparison of rebaked lightmaps vs the vanilla lightmaps
