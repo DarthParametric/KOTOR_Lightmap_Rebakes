@@ -2,38 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-* {box-sizing: border-box;}
-
-.img-comp-container {
-  position: relative;
-  height: 844px; /*should be the same height as the images*/
-}
-
-.img-comp-img {
-  position: absolute;
-  width: auto;
-  height: auto;
-  overflow:hidden;
-}
-
-.img-comp-img img {
-  display:block;
-  vertical-align:middle;
-}
-
-.img-comp-slider {
-  position: absolute;
-  z-index:9;
-  cursor: ew-resize;
-  /*set the appearance of the slider:*/
-  width: 40px;
-  height: 40px;
-  background-color: #2196F3;
-  opacity: 0.7;
-  border-radius: 50%;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="index.css">
 <script>
 function initComparisons() {
   var x, i;
@@ -94,7 +63,7 @@ function initComparisons() {
     }
     function getCursorPos(e) {
       var a, x = 0;
-      e = (e.changedTouches) ? e.changedTouches[0] : e;
+      e = e || window.event;
       /*get the x positions of the image:*/
       a = img.getBoundingClientRect();
       /*calculate the cursor's x coordinate, relative to the image:*/
@@ -119,9 +88,10 @@ function initComparisons() {
   
 <h1>STUNT_55a - Stunt Lehon Temple (Dark Side Ending)</h1>
 
-<p>Click and drag slider to compare before/after images. Vanilla lightmaps on the left, rebaked lightmaps on the right.</p>
+<p>Click and drag slider to compare before/after images. Vanilla lightmaps on the left, rebaked lightmaps on the right.</p> 
 
-
+</center>
+  
 <div class="img-comp-container">
   <div class="img-comp-img">
     <img src="https://raw.githubusercontent.com/DarthParametric/KOTOR_Lightmap_Rebakes/master/docs/images/m44ad/m44ad_01_rebaked.png" width="1500" height="844">
@@ -144,8 +114,8 @@ function initComparisons() {
   </div>
 </div>
 
-</center>
 
+  
 <script>
 /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
 initComparisons();
